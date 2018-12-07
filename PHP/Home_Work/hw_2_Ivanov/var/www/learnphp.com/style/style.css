@@ -6,7 +6,15 @@
 	border-radius: 50%;
     clear: both;
 }
-a.navbar-brand {
-
-	width: ;
+.content {
+	
 }
+.footer {
+	position: fixed;
+	
+	bottom: 0;
+	clear: both;	
+	width: 82%;
+}
+
+
