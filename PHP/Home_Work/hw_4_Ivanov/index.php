@@ -1,124 +1,43 @@
-<?php // This is index.php file is main load file in web aplication
-
-	/* Description for variables 
-	$udsName —    Имя валюты
-	$usd — 		  Цена купле
-	$usdSelling — Цена продажи
-	*/
-
-	$usdName = 'ДОЛЛАР';
-	$europeName = 'ЕВРО';
-	$rushaName = 'РУБЛЬ';
-	$polandName = 'ПОЛЬСКИЙ ЗЛОТЫЙ';
-
-	$usd = 27.900;
-	$usdSelling = 28.150; 
-
-	$europe = 31.600;
-	$europeSelling = 32.100;
-
-	$rusha = 0.366;
-	$rushaSelling = 0.429;
-
-	$poland = 7.013;
-	$polandSelling = 7.575;
-
-	// end php operation
-
+<?php 
+	$titlePageName = 'Курс гривны';
+	$descrPage = 'Курс валют в Украине: курс доллара к гривне, курс евро и гривны. Курс валют на сегодня в Украине онлайн.
+	';
+	// const for calculation of the hryvna	
+	$DOLLAR_RATE = 27.7;
+	$EURO_RATE = 31.35;
+	$STEP = 50;
+	$UA_BEFORE = 2000;
+	// contains value hrivnia
+	$uaFrom = 1000;	
 ?>	
 
 <html>
-<head>
-	<title>Курс валют less4</title>
-	<meta charset="utf-8">
-	<meta name="description" content="Home worki lesson 3.">
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-	
-		
-	<style> 
-		/* Style for table head (th)*/
-		thead > tr > th {
-			text-align: center;
-			vertical-align: middle !important;
-			background-color: #363641;
-			color: white
-		}
-		
-		tr:hover {
-			background-color: rgba(127, 166, 255, 0.19);
-
-		}
-	</style>
-	<link rel="stylesheet" href="style/bootstrap.css">
-
-</head>
+<?php include_once "head.php" ?>
 <body>
-
 	<div class="container">
-
-		<nav class="navbar navbar-dark bg-dark navbar-expand">
-			<a class="navbar-brand col-md-2" href="index.php">
-				Hillal.com.UA
-			</a>
-			<div class="collapse navbar-collapse">
-				<ul class="navbar-nav">
-					<li class="nav-item"><a class="nav-link" href="index.php">Главная</a></li>					
-					<li class="nav-item"><a class="nav-link" href="calc.php">Калькулятор</a></li>
-					<li class="nav-item"><a class="nav-link" href="contacts.php">Контакты</a></li>
-				</ul>
-			</div>
-		</nav> <!-- end navbar  -->
-
-		<h2 class="text-center">Курс валют в украине</h2>
+		<?php include_once "header.php"?>
+		<h2 class="text-center">Курс грианы на сегодня</h2>
 		<table class="table table-bordered">
 			<thead>
 				<tr>
-					<th>Курс в гривне</th>
-					<th>Наличный рынок<br>Покупка / Продажа</th>
-					<th>НБУ</th>
-					<th class="light">Седьмой рынок<br>Покупают / Продают</th>
+					<th>Валюта в гривнах</th>
+					<th>Валюта в долларах США</th>
+					<th>Валюта в евро</th>					
 				</tr>
 			</thead>
 			<tbody>
-				<tr>
-					<th><?= $usdName ?></th>
-					<td><?= $usd . ' / ' . $usdSelling ?></td>
-					<td><?= $usd ?></td>
-					<td><?= $usd . ' / ' . $usdSelling ?></td>
-				</tr>
-				<tr>
-					<th><?= $europeName ?></th>
-					<td><?= $europe . ' / ' . $europeSelling ?></td>
-					<td><?= $europe  ?></td>
-					<td><?= $europe. ' / ' . $europeSelling ?></td>
-				</tr>
-				<tr>
-					<th><?= $rushaName ?></th>
-					<td><?= $rusha . ' / ' . $rushaSelling ?></td>
-					<td><?= $rusha ?></td>
-					<td><?= $rusha. ' / ' . $rushaSelling ?></td>
-				</tr>
-				<tr>
-					<th><?= $polandName ?></th>
-					<td><?= $poland . ' / ' . $polandSelling ?></td>
-					<td><?= $poland ?></td>
-					<td><?= $poland. ' / ' . $polandSelling ?></td>
-				</tr>
+				<?php while ($uaFrom <= $UA_BEFORE) : ?>
+					<tr>					
+						<td><?= $uaFrom . ' грн.' ?></td>
+						<?php $uaFrom += $STEP ?>
+						<td><?= round($uaFrom / $DOLLAR_RATE,3) . ' usd.' ?></td>
+						<td><?= round($uaFrom / $EURO_RATE,3) . ' euro.' ?></td>
+					</tr>
+				<?php endwhile; ?>				
 			</tbody>
 		</table>
 
-		<div class="footer navbar navbar-dark bg-dark navbar-expand">
-
-			<a class="navbar-brand col-md-2 " href="index.php">
-				Hillal.com.UA
-			</a>
-
-			<div class="collapse navbar-collapse" >
-				<div class="navbar-nav col-md-12">
-					<h6 class="col-md-12"><a class="nav-item nav-link text-right" href="contacts.php">phplearn © 2018.</a></h6>
-				</div>
-			</div>
-		</div> <!-- FOOTER end -->
+		<?php include_once "footer.php" ?>
 	</div> <!-- END container -->
 </body>
 </html>
