@@ -68,10 +68,10 @@
 <html>
 <?php include_once 'head.php' ?>
 <body>
-	<div class='container'>
+	<div class="container">
 		<?php include_once 'header.php'?>
-		<h2 class='text-center'>Накладная для магазина Santim</h2>
-		<table class='table table-bordered'>
+		<h2 class="text-center">Накладная для магазина Santim</h2>
+		<table class="table table-bordered">
 			<thead>
 				<tr>
 					<th>Название товара</th>
@@ -86,7 +86,7 @@
 						<td><?= $tovar['cat'] ?></td>
 						<td><?= $tovar['price'] ?> грн. </td>
 					</tr>
-				<?php endforeach; ?>
+				<?php endforeach ?>
 				
 				</tr>
 			</tbody>

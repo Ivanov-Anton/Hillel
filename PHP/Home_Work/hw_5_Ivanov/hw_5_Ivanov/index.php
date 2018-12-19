@@ -6,11 +6,11 @@
 ?>
 <html>
 	<!-- <HEAD> meta data-->
-	<?php require_once "head.php" ?>
+	<?php require_once 'head.php' ?>
 	<!-- </HEAD> end meta data -->
 <body>
 	<div class="container">
-		<?php include_once "header.php"?>
+		<?php include_once 'header.php'?>
 		<h2 class="text-center">Список пользователей</h2>
 		<table class="table table-bordered">
 			<thead>
@@ -33,7 +33,7 @@
 				</tr>
 			</tbody>
 		</table>
-		<?php include_once "footer.php" ?>
+		<?php include_once 'footer.php' ?>
 	</div> <!-- END container -->
 </body>
 </html>
