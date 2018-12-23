@@ -23,10 +23,10 @@ function changeInUah($tovars, $course)
 function isUah ($tovar)
 {
 	$result = '';
-	if ($array['price_type'] == 'uah') {
-		$result = 'Гривна - ' . $array['price_val'];
+	if ($tovar['price_type'] == 'uah') {
+		$result = 'Гривна - ' . $tovar['price_val'];
 	} else {
-		$result = $array['price_val'];
+		$result = $tovar['price_val'];
 	}
 	return $result;
 }
