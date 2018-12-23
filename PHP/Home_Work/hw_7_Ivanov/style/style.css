@@ -1,0 +1,65 @@
+/* Style for table head (th)*/
+thead > tr > th {
+	text-align: center;
+	vertical-align: middle !important;
+	background-color: #363641;
+	color: white
+}	
+
+tr:hover {
+	background-color: rgba(127, 166, 255, 0.19);
+}
+.mainBlock {
+	color: white;
+	font-weight: bold;
+	background-image: url(../img/wraper.jpg);
+	background-position: center;
+	height: 450px;
+}
+.pageInfo {
+	color: white;
+	font-size: 50;
+	background-image: url(../img/red.jpg);
+	height:400px;
+}
+
+.card {
+	border: 2px solid #dad6d6;
+}
+.card:hover {
+	border: 1px solid #dad6d6;
+}
+.card img {
+	width: 100%;
+	height: auto;
+}
+.card .card-header {
+	height: 20%;
+}
+.price {
+	font-family: Arial;
+}
+.discount {
+
+	color: #fb515d;
+	background: #fef2b8;
+    border-radius: 5px;
+    
+    padding: 7px 7px 5px;
+    vertical-align: middle;
+    margin-right: .5em;
+    white-space: nowrap;
+    border: 1px solid transparent;
+}
+.discount small {
+	font-size: 60%;
+}
+.econom {
+	border: 1px dashed #fb515d;
+	color: #fb515d;
+}
+
+
+
+		
+	

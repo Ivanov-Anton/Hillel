@@ -1,29 +1,39 @@
 <?php 
-	$titlePageName = 'Личный кабинет';
-	$descrPage = 'Предоставление всех администраторов обслуживающий данный сайт.';
-	include './controller.php';		
-	$user['userName'] = $_GET['userName'];
-	$user['statusName'] = $_GET['statusName'];	
-	$user['ageName'] = $_GET['ageName'];
-	$user['commentName'] = $_GET['commentName'];
-	// chenge statusName admin teacher and stusent
-	switch ($user['statusName']) {
-		case 'admin': $user['statusName'] = 'админимтраторов'; 
-			break;
-		case 'student': $user['statusName'] = 'студентов';
-			break;
-		case 'teacher': $user['statusName'] = 'преподовательей';
-			break;
-	}
+$titlePageName = 'Личный кабинет';
+$descrPage = 'Предоставление всех администраторов обслуживающий данный сайт.';
+include './controller.php';		
+$users['userName'] = htmlspecialchars($_GET['userName']);
+$users['statusName'] = htmlspecialchars($_GET['statusName']);	
+$users['ageName'] = htmlspecialchars($_GET['ageName']);
+$users['commentName'] = htmlspecialchars($_GET['commentName']);
+/** create a tmp element of array
+* chenge statusName admin teacher and stusent
+*/
+switch ($users['statusName']) {
+	case 'admin': 
+		$users['statusName'] = 'админимтратор';		
+		$users['tmpStatusName'] = $users['statusName'] . 'ов';
+		break;
+	case 'student':
+		$users['statusName'] = 'студент';
+		$users['tmpStatusName'] = $users['statusName'] . 'ов';
+		break;
+	case 'teacher':
+		$users['statusName'] = 'преподователь';
+		$users['tmpStatusName'] = $users['statusName'] . 'ей';
+		break;
+}
+
 ?>
 <html>
 	<!-- <HEAD> meta data-->
-	<?php require_once "head.php" ?>
+	<?php require_once 'head.php' ?>
 	<!-- </HEAD> end meta data -->
 <body>
 	<div class="container">
-		<?php include_once "header.php"?>
-			<h2 class="text-center succesIinfo"><?= 'Поздравляем. Вы успешно зарегестрированы и добавлены в список ' . $user['statusName'] ?></h2>
+		<?php include_once 'header.php'?>
+			<!-- Displayed and then remove the last element of the array -->
+			<h2 class="text-center succesIinfo">Поздравляем. Вы успешно зарегестрированы и добавлены в список <?= array_pop($users) ?></h2>
 				<div class="container-fluid">
 					<div class="row justify-content-center">
 						<table class="table table-bordered table-hover">
@@ -34,14 +44,14 @@
 								<th>Коментарий</th>
 							</thead>
 							<tbody>
-								<?php foreach ($user as $value):?>
-							<td><?=$value?></td>
+								<?php foreach ($users as $user): ?>
+									<td><?= $user ?></td>
 								<?php endforeach ?>
 							</tbody>
 						</table>
 					</div>
 				</div>
-		<?php include_once "footer.php" ?>
+		<?php include_once 'footer.php' ?>
 	</div> <!-- END container -->
 </body>
 </html>

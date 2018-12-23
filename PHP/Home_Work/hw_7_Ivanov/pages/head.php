@@ -1,0 +1,10 @@
+<head>
+	<title><?= $titlePageName ?></title>
+	<meta charset="utf-8">
+	<meta name="description" content="<?= $descrPage ?>">
+	<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	 -->
+	<link rel="stylesheet" type="text/css" href="../style/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="../style/style.css">
+	<meta name="keywords" content="интернет магазин, товары из китая, дешевые товары, дешёвые товары из китая, китай товары, <?= $logo ?>"/>
+</head>

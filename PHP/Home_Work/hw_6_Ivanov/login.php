@@ -4,11 +4,11 @@
 ?>
 <html>
 	<!-- <HEAD> meta data-->
-	<?php require_once "head.php" ?>
+	<?php require_once 'head.php' ?>
 	<!-- </HEAD> end meta data -->
 <body>
 	<div class="container ">
-		<?php include_once "header.php"?>
+		<?php include_once 'header.php' ?>
 			<h2 class="text-center">Форма регестрации</h2>
 			<form method="POST" name="userData" class="col-md-4" action="/controller.php">
 					<div class="input-group"> 
@@ -37,7 +37,7 @@
 						<button type="submit" class="form-control btn btn-primary">Отправить</button>
 					</div>
 			</form>
-			<?php include_once "footer.php" ?>
+			<?php include_once 'footer.php' ?>
 	</div> <!-- END container -->
 </body>
 </html>
