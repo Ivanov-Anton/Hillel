@@ -1,0 +1,20 @@
+/*input number кол-во */
+.count {
+    color: white;
+    height: 35px;
+    background-color: #343A40;
+    vertical-align: middle;
+}
+/* Стили для таблицы корзины  user-cart */
+#shopCart {
+    position: absolute;
+    background-color: #fff;
+    right: 0px;
+    display: none;
+    /*Отображать поверх всех елементов DOM*/
+    z-index: 1;
+    border-radius: 4px;
+    box-shadow: 0px 10px 30px black;
+}
+
+

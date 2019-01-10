@@ -1,0 +1,6 @@
+RewriteEngine on
+RewriteBase /
+
+php_value session.gc_maxlifetime 60
+php_value session.cookie_lifetime 60
+

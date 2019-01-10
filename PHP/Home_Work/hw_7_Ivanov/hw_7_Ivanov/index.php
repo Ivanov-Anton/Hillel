@@ -11,9 +11,6 @@ $logo = 'ChinaPodval.com';
 	<div class="container">
 		<?php include_once('./pages/header.php') ?>
 		<h2 class="text-center p-3">Интернет магазин товаров из китая</h2>
-        <div class="alert alert-primary" role="alert">
-            A simple primary alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
-        </div>
 		<div class="container-fluid">
 			<div class="row justify-content-center mainBlock">
 				<div class="col-md-5 text-center">
@@ -21,7 +18,6 @@ $logo = 'ChinaPodval.com';
 					<a href="/pages/tovars.php" class="btn btn-info mb-5 mt-4">Список товаров</a>
 					<br>
 					<h1 class="mt-5"><?= $logo ?></h1>
-
 				</div>
 			</div>
 		</div>
