@@ -9,18 +9,18 @@
 	tr:hover {
 		background-color: rgba(127, 166, 255, 0.19);
 	}
-        .mainBlock {
-            color: white;
-            font-weight: bold;
-            background-image: url(../img/wraper.jpg);
-            background-position: center;
-            height: 450px;
-        }
-        .pageInfo {
-            color: white;
-            font-size: 50;
-            background-image: url(../img/red.jpg);
-            height:400px;
-        }
+    .mainBlock {
+        color: white;
+        font-weight: bold;
+        background-image: url(../img/wraper.jpg);
+        background-position: center;
+        height: 450px;
+    }
+    .pageInfo {
+        color: black !important;
+        font-size: 50;
+        background-image: url(../img/red.jpg);
+        height:400px;
+    }
         
 	

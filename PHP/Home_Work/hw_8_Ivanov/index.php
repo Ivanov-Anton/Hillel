@@ -16,8 +16,8 @@
 ?>
 <html>
 	<head>
-		<link rel="stylesheet" type="text/css" href="/style/bootstrap.css">
-		<link rel="stylesheet" type="text/css" href="/style/style.css">
+		<link rel="stylesheet" type="text/css" href="style/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="style/style.css">
 		<script src="js/script.js"></script>
 	</head>
 	<body>
