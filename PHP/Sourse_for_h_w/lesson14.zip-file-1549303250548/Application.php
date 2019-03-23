@@ -8,7 +8,7 @@ class Application
 
 	public static function getInstance()
 	{
-		if ($app == null) {
+		if (self::$app == null) {
 			self::$app = new Application;
 			self::$app->connectDb();
 		}

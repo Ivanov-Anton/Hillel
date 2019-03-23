@@ -12,9 +12,7 @@
 	$persons = [];
     // $personsObject -- contains an array of persons objects
 	$personsObject = [];
-	// $errorMessae -- contains message with desctiption error
-    // gets the value through $_GET['message']
-	$errorMessae;
+	
     if (!isset($_POST['category'])) {
         try {
             $persons = $db->query('SELECT * FROM `members`');
@@ -22,7 +20,7 @@
             DB::mssg('Error query in database. Controller.php ' . __LINE__);
         }
     }
-    if ($_POST['category']) {
+    if (isset($_POST['category'])) {
         $category = $_POST['category'];
         $sql = 'select * from `members` where role="' . $category . '"';
         try {
@@ -66,6 +64,9 @@
             } // end switch
         }
     } // end if
+    // $errorMessae -- contains message with desctiption error
+    // gets the value through $_GET['message']
+    $errorMessage = '';
 	if (isset($_GET['message'])) {
 		$errorMessage = 'Message: ' . htmlspecialchars($_GET['message']);
 	}

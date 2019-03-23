@@ -8,7 +8,9 @@
 	if (!isset($_GET['id'])) {
 		header('Location: index.php');
 	}
-
+/**
+ @@var Product $product
+ */
 	$product = ProductFactory::createFromDb($_GET['id']);
 
 ?>
